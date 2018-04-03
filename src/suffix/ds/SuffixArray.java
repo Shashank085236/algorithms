@@ -78,7 +78,7 @@ public class SuffixArray {
         System.out.println("input: "+s);
         System.out.println();
         System.out.println("---------------------------");
-        System.out.println("  i ind lcp rnk select");
+        System.out.println("  i ind lcp    select");
         System.out.println("---------------------------");
 
         for (int i = 0; i < s.length(); i++) {
