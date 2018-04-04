@@ -4,7 +4,30 @@ package dynamicprogramming;
  * Created by dwivesha on 4/3/2018.
  */
 public class DPUtil {
+
+    public static int max(int... args){
+        int max = Integer.MIN_VALUE;
+        for(int num : args){
+            max = num > max ? num : max;
+        }
+        return max;
+    }
+
+    public static int min(int... args){
+        int min = Integer.MAX_VALUE;
+        for(int num : args){
+            min = num < min ? num : min;
+        }
+        return min;
+    }
+
     public static void printDpTable(String H, String V, int[][] table){
+
+        if(null == H || null == V){
+            printDp(table);
+            return;
+        }
+
         H = H.toUpperCase(); V = V.toUpperCase();
         int dp[][] = new int[table.length+1][table[0].length+1];
 
@@ -18,6 +41,10 @@ public class DPUtil {
             }
         }
 
+        printDp(dp);
+    }
+
+    private static void printDp(int[][] dp){
         for(int row = 0; row < dp.length; row++){
             for(int col =0; col < dp[0].length; col++){
                 if(row == 0 || col == 0)
@@ -27,5 +54,10 @@ public class DPUtil {
             }
             System.out.println();
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(max(5,1,4,6,2));
+        System.out.println(min(5,1,4,6,2));
     }
 }
