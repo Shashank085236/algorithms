@@ -4,9 +4,9 @@ package dynamicprogramming;
  * Created by dwivesha on 4/3/2018.
  *
  * Statement: There are 3 operation allowed with some cost associated.
- 1. Insert a character : cost 2
+ 1. Insert a character : cost 1
  2. Delete a character : cost 1
- 3. Replace a character : cost 3 if characters are different else 0
+ 3. Replace a character : cost 1 if characters are different else 0
 
  Goal is to convert a given word T1 into other word T2 with minimum cost involved.
 
@@ -23,9 +23,9 @@ package dynamicprogramming;
  *
  */
 public class EditDistance {
-    public static final int INSERT_COST= 2;
+    public static final int INSERT_COST= 1;
     public static final int DELETE_COST= 1;
-    public static final int REPLACE_COST= 3;
+    public static final int REPLACE_COST= 1;
 
     public static void main(String[] args) {
 
